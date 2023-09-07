@@ -23,10 +23,10 @@ This boilerplate provides a starting point for building applications that intera
 #### Installation Steps:
 
 1. Download the folder from GitHub.
-2. Install the required dependencies using <b>npm install.</b>
-3. Follow the steps below to set up <b>environment variables.</b>
-4. Open your terminal, navigate to the project root, and run <b>npm run start-backend</b> (defaults to port 8000). You can change the port in server.js.
-5. In new terminal tab, run <b>npm run start-frontend</b>. Your default browser should open to localhost.
+2. Install the required dependencies using <i><b>npm install.</b></i>
+3. Follow the steps below to set up <i><b>environment variables.</b></i>
+4. Open your terminal, navigate to the project root, and run <i><b>npm run start-backend</b> </i>(defaults to port 8000).
+5. In new terminal tab, run <i><b>npm run start-frontend</b></i>. Your default browser should open to localhost.
 
 Any changes made to the code will automatically reflect in the running app thanks to Nodemon.
 
@@ -35,10 +35,14 @@ Create a .env file at the project's root level (same level as package.json) and 
 
 - REACT_APP_OPEN_AI_SECRET_API_KEY
 - REACT_APP_BACKEND_COMPLETIONS_URL
+- REACT_APP_ALLOWED_ORIGIN_URLS
 
 If you don't have an API key, sign up with OpenAI and obtain one from OpenAI's platform.
 
 The default backend completions URL is http://localhost:8000/completions when running locally. To change this, see server.js.
+
+Allowed Origin URLs is a comma separated list of URLs which are whitelisted to access the backend. Add your frontend URL here. 
+Default: REACT_APP_ALLOWED_ORIGIN_URLS=http://localhost:3000
 
 #### Backlog: 
 - Add firebase hosting configurations

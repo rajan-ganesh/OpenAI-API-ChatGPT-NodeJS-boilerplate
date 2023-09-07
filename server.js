@@ -6,7 +6,10 @@ require('dotenv').config()
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+
+//Whitelisting URLs that can access the backend server
+const allowedOrigins = process.env.REACT_APP_ALLOWED_ORIGIN_URLS.split(",");
+app.use(cors({ origin: allowedOrigins }))
 
 app.post('/completions', async (req, res) => {
     console.log("Backend Completions API called with request: ", req.body.message);
